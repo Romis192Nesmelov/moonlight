@@ -1,0 +1,99 @@
+body {
+    background-color: white;
+}
+
+.error {
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    font-size: 12px !important;
+    font-weight: bold;
+    color: red !important;
+}
+
+.btn-primary {
+    /*width: 270px;*/
+    /*padding: 20px 0 16px 0;*/
+    border-radius: 4px;
+    border-color: #c6944e;
+    background: linear-gradient(to top, #755139, #c6944e);
+    font-family: 'Pt sans web', sans-serif;
+    /*font-size: 20px;*/
+    /*font-weight: bold;*/
+    text-transform: uppercase;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:hover {
+    background: linear-gradient(to top, #755139, #c6944e);
+    border-color: #c6944e;
+}
+
+
+
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+    background-color: #e98809;
+    border-color: #e18f00;
+}
+
+label {
+    padding-left: 5px;
+    margin-bottom: 0 !important;
+    font-family: 'Pt sans web', sans-serif;
+}
+
+input, select {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    vertical-align: middle;
+    padding: 8px 12px;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+    font-family: 'Pt sans web', sans-serif;
+    color: #353535;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.428571429;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+.modal-body {
+    padding-bottom: 0;
+}
+
+.modal-body input {
+    text-align: center;
+}
+
+.modal-body textarea {
+    width: 100%;
+    height: 130px;
+    resize: none;
+}
+
+.modal-body p, .modal-footer p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.modal-footer {
+    width: 100%;
+    display: table;
+    padding-top: 10px;
+    text-align: center;
+}
