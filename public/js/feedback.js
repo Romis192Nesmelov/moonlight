@@ -1,10 +1,6 @@
 $(document).ready(function ($) {
     window.phoneRegExp = /^((\+)?(\d)(\s)?(\()?[0-9]{3}(\))?(\s)?([0-9]{3})(\-)?([0-9]{2})(\-)?([0-9]{2}))$/gi;
 
-    $('#mail-to-us').click(function () {
-        $('#feedback-modal').modal('show');
-    });
-
     $('input[name=phone]').keyup(function () {
         unlockSendButton($(this));
     }).mask("+7(999)999-99-99",{completed:function(){
@@ -48,14 +44,12 @@ $(document).ready(function ($) {
 
         $.post(form.attr('action'), fields)
             .done(function(data) {
-                self.parents('.modal').modal('hide');
                 var messageModal = $('#message');
                 messageModal.find('h3').html(data.message);
                 messageModal.modal('show');
                 form.trigger('reset');
                 form.find('.btn-primary').attr('disabled','disabled');
                 $('span.checked').removeClass('checked');
-                $('#amount > span.digit').html(window.price);
                 removeLoaderScreen();
             })
             .fail(function(jqXHR, textStatus, errorThrown) {
@@ -64,7 +58,7 @@ $(document).ready(function ($) {
                         'phone':'«Телефон»',
                         'email':'«E-mail»',
                         'name':'«Имя»',
-                        'message':'«Сообщение»',
+                        'message':'«Сообщение»'
                     };
                 $.each(responseMsg.errors, function (field, error) {
                     var errorMsg = error[0];

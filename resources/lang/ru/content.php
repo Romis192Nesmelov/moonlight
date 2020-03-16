@@ -77,9 +77,10 @@ return [
     'your_message' => 'Ваше сообщение',
     'message' => 'Сообщение',
     'agree' => 'Согласен на обработку персональных данных',
-    
-    'message_from' => 'Сообщение с сайта :from',
-    'message_from_user' => 'Сообщение от пользователя: :name',
+
+    'message_from' => 'Сообщение с :from',
+    'registration_for_training' => 'Запись на тренинг',
+    'with_name' => 'Имя: :name',
     'with_email' => 'E-mail: :email',
     'with_phone' => 'Телефон: :phone'
 ];

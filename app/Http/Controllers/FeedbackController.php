@@ -14,7 +14,7 @@ class FeedbackController extends Controller
             'name' => 'required|min:3|max:50',
             'email' => 'required|email',
             'phone' => $this->validationPhone,
-            'content' => 'max:200',
+//            'content' => 'max:200',
             'i_agree' => 'required|accepted'
         ]);
 
