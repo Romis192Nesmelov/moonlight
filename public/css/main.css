@@ -21,7 +21,7 @@ html, body {
 
 h1 {
     font-family: 'Pt sans web', sans-serif;
-    color: #41516b;
+    color: #7d8fac;
     text-transform: uppercase;
     text-shadow: 1px 1px 1px black, 0 0 0.5em;
 }
@@ -39,6 +39,26 @@ video {
 
 ul {
     margin-top: 10px;
+}
+
+.logo.left {
+    width: 15%;
+    top: 7%;
+    right: 50%;
+    padding-top: 10px;
+    padding-right: 15px;
+    position: absolute;
+    z-index: 999;
+}
+
+.logo.right {
+    width: 100%;
+    display: none;
+    margin-bottom: 15px;
+}
+
+.logo > img {
+    width: 100%;
 }
 
 #right-side {
@@ -178,12 +198,24 @@ input, select {
         height: 100%;
     }
 
+    .logo.left {
+        width: 30%;
+    }
+
     #right-side > div {
         width: 100%;
     }
 }
 
 @media (max-width: 768px) {
+    .logo.left {
+        display: none;
+    }
+
+    .logo.right {
+        display: block;
+    }
+
     #right-side {
         width: 70%;
     }

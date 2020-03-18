@@ -1,0 +1,1 @@
+<div class="logo {{ $addClass }}"><img src="{{ asset('images/logo.png') }}" /></div>
