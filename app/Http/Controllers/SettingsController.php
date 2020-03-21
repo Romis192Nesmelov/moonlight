@@ -29,13 +29,8 @@ class SettingsController extends Controller
         return $tags;
     }
 
-    public function getCoordinates()
+    public function getEmails()
     {
-        return $this->settings->coordinates;
-    }
-
-    public function getWorkTime()
-    {
-        return $this->settings->worktime;
+        return $this->settings->emails;
     }
 }

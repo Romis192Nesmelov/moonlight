@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Config;
+//use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Settings;
 
 class FeedbackController extends Controller
 {
@@ -11,15 +12,16 @@ class FeedbackController extends Controller
     public function feedback(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|min:3|max:50',
+//            'name' => 'required|min:3|max:50',
             'email' => 'required|email',
             'phone' => $this->validationPhone,
 //            'content' => 'max:200',
             'i_agree' => 'required|accepted'
         ]);
 
-        $fields = $this->processingFields($request, null, 'i_agree');
-        $this->sendMessage(Config::get('app.master_mail'), 'sendmessage', $fields);
+        $fields = $this->processingFields($request, null, ['i_agree','email_num']);
+        $emails = Settings::getEmails();
+        $this->sendMessage($request->input('email_num') == 1 ? $emails->email1 : $emails->email2, 'sendmessage', $fields);
         return response()->json(['success' => true]);
     }
 

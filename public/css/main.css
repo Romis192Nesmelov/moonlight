@@ -19,11 +19,19 @@ html, body {
     font-family: Montserrat, sans-serif;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Pt sans web', sans-serif;
     color: #7d8fac;
     text-transform: uppercase;
     text-shadow: 1px 1px 1px black, 0 0 0.5em;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 18px;
 }
 
 h1 span {
@@ -37,13 +45,30 @@ video {
     position: absolute;
 }
 
+ul, ol {
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+ol {
+    color: white;
+}
+
 ul {
-    margin-top: 10px;
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+    color: #7d8fac;
+}
+
+p.record {
+    font-size: 11px;
+    text-align: center;
+    color: #7d8fac;
 }
 
 .logo.left {
-    width: 15%;
-    top: 7%;
+    width: 20%;
+    top: 35px;
     right: 50%;
     padding-top: 10px;
     padding-right: 15px;
@@ -65,29 +90,29 @@ ul {
     width: 50%;
     top: 0;
     right: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
     position: absolute;
     background: url("../images/black.png") repeat;
     box-shadow: -3px 0 10px rgba(0,0,0,0.5);
 }
 
-#right-side > div {
-    width: 600px;
+#right-side-container {
+    width: 80%;
     display: table;
     position: absolute;
-    padding: 10px 30px;
+    padding: 30px 20px;
 }
 
 .image-container {
     width: 100%;
-    padding: 10px 20px;
+    padding: 20px;
     display: table;
 }
 
 .image-container .image-cell {
-    width: 25%;
+    width: 30%;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .image {
@@ -103,19 +128,37 @@ ul {
 }
 
 .image-container .image-subscribe {
-    width: 75%;
+    width: 70%;
     height: 100%;
     padding-left: 20px;
     font-size: 12px;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     font-weight: normal;
     color: white;
 }
 
-form {
-    padding: 20px 80px;
-    text-align: center;
+.square-block {
+    width: 100%;
+    padding: 15px;
+    margin: 25px 0;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: #7d8fac;
+    display: table;
+    box-shadow: inset -3px 0 10px rgba(0,0,0,0.5);
+}
+
+.square-block p {
+    font-size: 12px;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    text-align: justify;
+    color: white;
+    font-weight: normal;
+}
+
+.square-block p:last-child {
+    margin-bottom: 0;
 }
 
 .error {
@@ -129,7 +172,9 @@ form {
 
 .btn-primary {
     width: 50%;
-    margin: 20px auto 0 auto;
+    height: 30px;
+    margin: 5px auto 0 auto;
+    padding: 0 !important;
     border-radius: 4px;
     border-color: #a5bae7;
     background: linear-gradient(to top, #2b3a59, #a5bae7);
@@ -149,28 +194,37 @@ form {
 
 .btn-primary.disabled:hover,
 .btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
 .btn-primary.disabled:focus,
 .btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
 .btn-primary.disabled.focus,
-.btn-primary[disabled].focus,
-fieldset[disabled] .btn-primary.focus {
+.btn-primary[disabled].focus {
     background-color: #09142a;
     border-color: #102655;
+}
+
+.form-horizontal {
+    width: 100%;
+    display: table;
+    text-align: center;
+}
+
+.form-group {
+    width: 48%;
+    display: inline-block;
+    margin: 0 1% !important;
 }
 
 label {
     padding-left: 5px;
     margin-bottom: 0 !important;
     font-family: 'Pt sans web', sans-serif;
+    text-align: left !important;
 }
 
-input, select {
+input {
     width: 100%;
-    height: 50px;
     vertical-align: middle;
-    padding: 8px 12px;
+    padding: 0 !important;
     border: 2px solid #2b3a59 !important;
     border-radius: 4px;
     font-family: 'Pt sans web', sans-serif;
@@ -208,12 +262,12 @@ input, select {
         width: 30%;
     }
 
-    #right-side > div {
+    #right-side-container {
         width: 100%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .logo.left {
         display: none;
     }
@@ -231,7 +285,7 @@ input, select {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     #right-side {
         width: 80%;
     }
@@ -251,6 +305,10 @@ input, select {
         padding: 15px;
         display: block;
         text-align: center;
+    }
+
+    .form-group {
+        width: 100%;
     }
 
     .btn-primary {

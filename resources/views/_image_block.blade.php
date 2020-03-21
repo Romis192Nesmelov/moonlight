@@ -4,7 +4,9 @@
             <a href="{{ asset($image) }}" class="img-preview"><img src="{{ asset($image) }}" /></a>
         </div>
     </div>
-    @if (isset($subscribe) && $subscribe)
-        <div class="image-subscribe">{!! $subscribe !!}</div>
-    @endif
+    <div class="image-subscribe">
+        <p>{!! $subscribe !!}</p>
+        <p class="record">Запись на индивидуальную консультацию</p>
+        @include('_feedback_block')
+    </div>
 </div>

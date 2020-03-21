@@ -1,11 +1,13 @@
+
 <form class="form-horizontal" enctype="multipart/form-data" action="{{ url('/feedback') }}" method="post">
     {{ csrf_field() }}
-    @include('_input_block',[
-        'min' => 3,
-        'placeholder' => trans('content.your_name'),
-        'type' => 'text',
-        'name' => 'name'
-    ])
+    <input type="hidden" name="email_num" value="{{ $email }}">
+    {{--@include('_input_block',[--}}
+        {{--'min' => 3,--}}
+        {{--'placeholder' => trans('content.your_name'),--}}
+        {{--'type' => 'text',--}}
+        {{--'name' => 'name'--}}
+    {{--])--}}
 
     @include('_input_block',[
         'placeholder' => trans('content.your_email'),

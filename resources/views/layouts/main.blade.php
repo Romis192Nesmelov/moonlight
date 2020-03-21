@@ -21,6 +21,7 @@
     <link href="{{ asset('css/components.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/icons/fontawesome/styles.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/perfect-scrollbar.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/loader.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css">
 
@@ -36,6 +37,8 @@
 
     <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.maskedinput.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.mousewheel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/perfect-scrollbar.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/loader.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/feedback.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
