@@ -4,8 +4,10 @@
     <div id="video-container" data-scroll="home">
         <video autoplay="autoplay" preload="auto" muted loop="loop" poster="{{ asset('video/poster.jpg') }}"><source src="{{ asset('video/particles.mp4') }}"></video>
     </div>
+    @include('_logo_block', ['addClass' => 'left'])
     <div id="right-side">
         <div>
+            @include('_logo_block', ['addClass' => 'right'])
             <h1>Запись на  курс раскрытие<br>женского ресурса <span>«Moonlight»</span> 2 дня</h1>
             @include('_image_block',['image' => 'images/foto1.jpg', 'subscribe' => 'Нейрокоуч, сертифицированный кокс ICI, специалист в области психологии'])
             @include('_image_block',['image' => 'images/foto2.jpg', 'subscribe' => 'Нейрокоуч, сертифицированный коуч ICI, специалист в области психологии, игропрактик женских трансформационных игр'])

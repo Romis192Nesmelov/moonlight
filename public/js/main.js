@@ -1,4 +1,4 @@
-$(document).ready(function ($) {
+$(window).ready(function ($) {
     $('.styled').uniform();
     $('a.img-preview').fancybox({padding: 3});
     $('input[name=phone]').mask("+7(999)999-99-99");
@@ -32,8 +32,8 @@ function mainHeight() {
             });
         }
     }
-    $('#slider, #right-side').css('height',$(window).height());
 
+    $('#slider, #right-side').css('height',$(window).height());
     if (rightSide.height() > rightSideContainer.height()) {
         rightSideContainer.css({
             'top':'50%',
