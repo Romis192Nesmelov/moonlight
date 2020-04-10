@@ -67,7 +67,7 @@ p.record {
 }
 
 .logo.left {
-    width: 20%;
+    width: 15%;
     top: 35px;
     right: 50%;
     padding-top: 10px;
@@ -259,7 +259,7 @@ input {
     }
 
     .logo.left {
-        width: 30%;
+        width: 20%;
     }
 
     #right-side-container {

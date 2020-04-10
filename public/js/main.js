@@ -18,7 +18,9 @@ $(window).ready(function ($) {
     });
 
     $(document).mousewheel(function (e) {
-        if (!window.mouseOnRight) rightSide.scrollTop -= e.deltaY * 30;
+        if (!window.mouseOnRight) {
+            rightSide.scrollTop -= e.deltaY * 35;
+        }
     });
     
     // Reload page
