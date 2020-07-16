@@ -21,7 +21,7 @@ class FeedbackController extends Controller
 
         $fields = $this->processingFields($request, null, ['i_agree','email_num']);
         $emails = Settings::getEmails();
-        $this->sendMessage($request->input('email_num') == 1 ? $emails->email1 : $emails->email2, 'sendmessage', $fields);
+        $this->sendMessage($request->input('email_num') == 1 ? (string)$emails->email1 : (string)$emails->email2, 'sendmessage', $fields);
         return response()->json(['success' => true]);
     }
 
